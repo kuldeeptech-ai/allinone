@@ -93,14 +93,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
-      /********** Chrome check **********/
-      const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-      if (!isChrome) {
-        const chromeModal = document.getElementById('chromeModal');
-        chromeModal.classList.remove('hidden');
-        chromeModal.setAttribute('aria-hidden', 'false');
-        return; // block video setup in non-Chrome
-      }
+      
 
       /********** Shaka player setup **********/
       shaka.polyfill.installAll();
